@@ -116,7 +116,7 @@ class Onliner:
             if response.status_code == 200:
                 print(f"Sniped Vanity {vanity_code}")
             elif 'mfa' in response.text:
-                if self.xtick == None:
+                
                     ticket = response.json()['mfa']['ticket']
                     cookies2 = response.cookies
                     tick, x = self._mfa(password, ticket, cookies2)
